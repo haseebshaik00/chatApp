@@ -16,6 +16,13 @@ socket.on('logged_in', (data) => {
     $('#user').text(`Welcome ${data.username}! Go on connect with your buddies.`);
     $('#loginBox').hide();
     $('#chatBox').show();
+    $('#chatBoxOuter').css("margin-top", "3.5%");
+})
+
+socket.on('display_friends', (usernames) => {
+    usernames.forEach(e => {
+        $('#friendsList').append($('<li>').text(e));
+    })
 })
 
 socket.on('logged_fail', (data) => {

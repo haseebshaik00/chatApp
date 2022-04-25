@@ -25,15 +25,19 @@
                 <button id="btnStart" class="btn btn-primary btn-lg mt-4">Start</button><br>
             </div>
     
-            <div id="chatBox" class="col-6">
-                <input class="form-control" type="text" id="inpToUser" placeholder="Send to ..."><br>
-                <input class="form-control" type="text" id="inpMsg" placeholder="Type your message"><br>
-                <button id="btnSend" class="btn btn-primary btn-lg mt-4">Send Message!</button><br>
-                <ul id="ulMsgList"></ul><br>
-            </div>
-
-            <div class="col-6">
-
+            <div id="chatBox" class="row">
+                <div class="col-6">
+                    <input class="form-control form-control-chatBox" type="text" id="inpToUser" placeholder="Send to ..."><br>
+                    <input class="form-control form-control-chatBox" type="text" id="inpMsg" placeholder="Type your message"><br>
+                    <button id="btnSend" class="btn btn-primary btn-lg mt-4 mb-5">Send Message!</button><br>
+                    <b class="fs-3 mt-5">Messages</b><hr>
+                    <ul class="mt-5" id="ulMsgList"></ul><br>
+                </div>
+    
+                <div class="font-monospace col-6">
+                    <b class="fs-3">Online</b><hr>
+                    <ul id="friendsList"></ul>
+                </div>
             </div>
         </div>
     </center>
